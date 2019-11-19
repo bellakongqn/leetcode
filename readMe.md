@@ -5,3 +5,4 @@ leetcode practice
 ### 头脑风暴 Brainteaser
 ### 堆 Heap
 ### 栈 Stack
+### 数学 Math
