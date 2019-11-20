@@ -6,3 +6,4 @@ leetcode practice
 ### 堆 Heap
 ### 栈 Stack
 ### 数学 Math
+### 队列 Queue
