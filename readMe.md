@@ -7,3 +7,4 @@ leetcode practice
 ### 栈 Stack
 ### 数学 Math
 ### 队列 Queue
+### 排序 Sort
