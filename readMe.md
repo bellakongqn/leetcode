@@ -9,3 +9,4 @@ leetcode practice
 ### 队列 Queue
 ### 排序 Sort
 ### Random
+### 字典树
