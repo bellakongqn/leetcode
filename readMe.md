@@ -8,3 +8,4 @@ leetcode practice
 ### 数学 Math
 ### 队列 Queue
 ### 排序 Sort
+### Random
