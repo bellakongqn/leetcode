@@ -30,21 +30,6 @@ var findCircleNum = function(M) {
 
     let parent = new Array(n);
 
-    // parent:[0,1,2]
-    for(let i = 0;i < n;i++){
-        parent[i] = i;
-    }
-    //[[1,1,0],
-    // [1,1,0],
-    // [0,0,1]]
-    // 
-    for(let i = 0;i < n;i++){
-        for(let j = 0; j < n;j++){
-            if(M[i][j] == 1){
-                union(i,j);
-            }
-        }
-    }
     let find = (p) => {
         while( p != parent[p]){
             parent[p] = parent[parent[p]];
@@ -66,6 +51,23 @@ var findCircleNum = function(M) {
         count--; 
         // => count=2
     }
+
+    // parent:[0,1,2]
+    for(let i = 0;i < n;i++){
+        parent[i] = i;
+    }
+    //[[1,1,0],
+    // [1,1,0],
+    // [0,0,1]]
+    // 
+    for(let i = 0;i < n;i++){
+        for(let j = 0; j < n;j++){
+            if(M[i][j] == 1){
+                union(i,j);
+            }
+        }
+    }
+    
     return count;
 };
 
