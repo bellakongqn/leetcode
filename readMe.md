@@ -12,3 +12,5 @@ leetcode practice
 ### Trie 字典树 
 ### Backtracking 回溯算法
 ### UnionFind 并查集
+### Bfs  广度优先遍历 
+### Dfs  深度优先遍历
