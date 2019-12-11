@@ -10,7 +10,6 @@
 // map 结构
 var uniqueOccurrences = function(arr) {
     var map =new Map()
-    var res  = []
     for (let i = 0; i < arr.length; i++) {
         //利用Map的数据结构统计次数
         if (!map.has(arr[i])) {
@@ -19,9 +18,7 @@ var uniqueOccurrences = function(arr) {
             map.set(arr[i], map.get(arr[i]) + 1)
         }
     }
-    for (let value of map.values()) {
-        res.push(value)
-    }
+    var res = [...map.values()]
     return new Set(res).size ===res.length
 };
 
