@@ -18,3 +18,4 @@ leetcode practice
 ### BinaryIndexedTree 树状数组
 ### ReservoirSampling 蓄水池抽样
 ### Array 数组
+### HashTable 哈希表
