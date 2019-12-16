@@ -7,3 +7,20 @@
 输出: 28
 解释: 最大的结果是 5 ^ 25 = 28.
  */
+ let res = 0
+  let mask = 0
+  for (let i = 31; i >= 0; i--) {
+    mask = mask | (1 << i)
+    let set = new Set()
+    for (let num of nums) {
+      set.add(num & mask)
+    }
+    let temp = res | (1 << i)
+    for (let item of set) {
+      if (set.has(item ^ temp)) {
+        res = temp
+        break
+      }
+    }
+  }
+  return res
