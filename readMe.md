@@ -19,3 +19,4 @@ leetcode practice
 ### ReservoirSampling 蓄水池抽样
 ### Array 数组
 ### HashTable 哈希表
+### SegmenTree 线段树
