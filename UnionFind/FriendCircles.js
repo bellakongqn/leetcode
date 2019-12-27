@@ -40,26 +40,17 @@ var findCircleNum = function(M) {
     //          (0,1)
     let union = (p,q) => {
         let rootP = find(p);
-        //  rootP = 0
         let rootQ = find(q);
-        //  rootQ = 1
         if(rootP == rootQ){
             return;
         }
-        // parent[0] = 1 => parent :[1,1,2]
         parent[rootP] = rootQ;
         count--; 
-        // => count=2
     }
 
-    // parent:[0,1,2]
     for(let i = 0;i < n;i++){
         parent[i] = i;
     }
-    //[[1,1,0],
-    // [1,1,0],
-    // [0,0,1]]
-    // 
     for(let i = 0;i < n;i++){
         for(let j = 0; j < n;j++){
             if(M[i][j] == 1){
