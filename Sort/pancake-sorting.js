@@ -35,6 +35,10 @@ var pancakeSort = function (A) {
 };
 
 
+
+
+
+
 /**
  * @param {number[]} A
  * @return {number[]}
@@ -80,4 +84,30 @@ var pancakeSort = function(A) {
             A[times-i]=temp;
         }
         return A;
+    }
+
+
+
+    // 1------简写
+var pancakeSort = function(A) {
+        let res = []
+        for(let i = A.length - 1; i >= 0; i--) {
+            if(A[i] == i+1) continue;
+            let idx = A.indexOf(i + 1)
+            if(idx != 0) {
+                reverse(A, 0, idx)
+                res.push(idx + 1)
+            }
+    
+            reverse(A, 0, i)
+            res.push(i + 1)
+        }
+        return res
+    };
+    function reverse(A, start, end) {
+        while(start < end) {
+            [A[start], A[end]] = [A[end], A[start]]
+            start++
+            end--
+        }
     }
