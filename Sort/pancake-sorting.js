@@ -34,11 +34,6 @@ var pancakeSort = function (A) {
     return res
 };
 
-
-
-
-
-
 /**
  * @param {number[]} A
  * @return {number[]}
@@ -63,30 +58,28 @@ var pancakeSort = function(A) {
 };
 
 
-   function findMax(A,B,curr){
-        let num=B[B.length-curr-1];
-        let index=0;
-        for(let i=0;i<A.length;i++){
-            if(A[i]==num)
-            {  
-                index=i;
-                break;
-            } 
-        }
-        if(B.length-curr-1==index)
-            return -1;
-        return index;
+function findMax(A,B,curr){
+    let num=B[B.length-curr-1];
+    let index=0;
+    for(let i=0;i<A.length;i++){
+        if(A[i]==num)
+        {  
+            index=i;
+            break;
+        } 
     }
-    function reverse(A,times){
-        for(let i=0;i<(times+1)/2;i++){
-            let temp=A[i];
-            A[i]=A[times-i];
-            A[times-i]=temp;
-        }
-        return A;
+    if(B.length-curr-1==index)
+        return -1;
+    return index;
+}
+function reverse(A,times){
+    for(let i=0;i<(times+1)/2;i++){
+        let temp=A[i];
+        A[i]=A[times-i];
+        A[times-i]=temp;
     }
-
-
+    return A;
+}
 
     // 1------简写
 var pancakeSort = function(A) {
@@ -103,11 +96,12 @@ var pancakeSort = function(A) {
             res.push(i + 1)
         }
         return res
-    };
-    function reverse(A, start, end) {
-        while(start < end) {
-            [A[start], A[end]] = [A[end], A[start]]
-            start++
-            end--
-        }
+};
+// 交换
+function reverse(A, start, end) {
+    while(start < end) {
+        [A[start], A[end]] = [A[end], A[start]]
+        start++
+        end--
     }
+}
